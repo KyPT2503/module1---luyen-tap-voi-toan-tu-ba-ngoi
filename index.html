@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<div>
+    <input type="text" id="a" placeholder="a">
+    <input type="text" id="b" placeholder="b" onchange="bai1()">
+    <p id="bai1output"></p>
+</div>
+<div>
+    <input type="text" id="bai2input" onchange="bai2()">
+    <p id="bai2output"></p>
+</div>
+<script>
+    function bai1()
+    {
+        let sum=(+document.getElementById("a").value)+(+document.getElementById("b").value);
+        console.log(sum);
+        document.getElementById("bai1output").innerHTML=(sum<4)?'Below':'Over';
+    }
+    function bai2()
+    {
+        let input=document.getElementById("bai2input").value;
+        let message;
+        if(input=='Employee')
+        {
+            message='Hello';
+        }
+        else if(input=='Director')
+        {
+            message='Greatings';
+        }
+        else if(input=='')
+        {
+            message='No login';
+        }
+        else message='xxx';
+        document.getElementById("bai2output").innerHTML=message;
+    }
+</script>
+</body>
+</html>
